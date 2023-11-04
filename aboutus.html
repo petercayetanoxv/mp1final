@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="media/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>DIAS SHOP PORTAL</title>
+</head>
+<body>
+<!--navbar-->
+<div>
+<nav class="navbar navbar-expand-lg fixed-top navbarcolor">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4" href="index.html"><img class="logo" src="media/logo.png"></a>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-white border-bottom">
+                <a href="index.html" class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo" src="media/logo.png"></a>
+                <button type="button" class="btn-close btn-close-white shadow-none p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topup.html">Top-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                        <i class='bx bx-log-in' id="loginicon"></i>&nbspLog In/Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+<div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content wrapper" id="body1">
+            <div class="modal-body">
+                <form class="formbg needs-validation" novalidate>
+                    <h1>Log In</h1>
+                    <div class="input-box">
+                        <input type="text email" placeholder="Username/Email Address" required>
+                        <i class='bx bxs-user'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Username or Email Address.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+            
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <p>Forgot password?<a href="#"> Click here!</a></p>
+                    </div>
+            
+                    <button type="submit" class="loginbtn">Log In</button>
+            
+                    <div class="register-link">
+                        <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                        <p>Don't have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup">
+                            Register here!
+                        </button></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="staticBackdrop1Signup" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content wrapper" id="body1">
+            <div class="modal-body">
+                <form class="formbg needs-validation" novalidate>
+                    <h1>Sign Up</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <i class='bx bxs-user'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Full Name.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Address" required>
+                        <i class='bx bx-envelope'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Email Address.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Confirm Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please confirm your password.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <i class='bx bx-phone' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Phone Number.
+                        </div>
+                    </div>
+            
+                    <button type="submit" class="loginbtn">Signup</button>
+            
+                    <div class="register-link">
+                        <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                        <p>Already have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            Log in here!
+                        </button></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--navbar-->
+<br>
+<br>
+<br>
+<br>
+<!--content-->
+<div class="container h1 pageheader">
+    ABOUT DIAS SHOP PORTAL
+</div>
+<br>
+<br>
+<div class="goal">
+    <h5>We’re building the platform of choice for taking life’s digital experiences over the top</h5>
+</div>
+<br>
+<br>
+<div class="container bg-opacity-25 bg-body-secondary pb-3 pt-3 rounded-1">
+    <div class="story">
+        <h2>OUR STORY</h2>
+    </div>
+    <div class="content"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Founded in 2023, Dias Shop brings over a decade of experience managing the complexities of monetization and content discovery in gaming and beyond. Dias Shop is trusted by over 300 publishers – including industry giants Activision Blizzard, Bigo, Electronic Arts, Riot Games, and Zynga – to grow revenue, profit margins, and customer engagement by connecting them to 10M+ paying customers around the world. Dias Shop offers channel, platform and payment solutions including Dias Shop, which offers direct payments integration on publishers’ websites, and Dias Shop, the preferred destination for in-game content purchases for millions of gamers worldwide, and xShop, which makes their content available on a range of e-commerce platforms.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Headquartered in Philippines and backed by Nash Capital, Sight Partners, CGIC, Pis Partners, and GGMO Global Payment Fund, Dias Shop has been named one of the fastest-growing companies in TAPAC by the Financial Timers, a Technology Pioneer by the Worldwide Economic Forum and the BestBuyer Payment Solutions Provider for the Gaming Industry (Global) by Global Branded Magazine.</p>
+                </div>
+                <hr style="color: white;">
+                <div class="col-md-6">
+                    <h4><img src="media/mission.png" height="36px">&nbsp&nbspMISSION</h4><br>
+                    <p>To offer the best value, experience, and entertainment to our customers, every day, without fail.</h6>
+                </div>
+                <div class="col-md-6">
+                    <h4><img src="media/vision.png" height="26px">&nbsp&nbspOUR VISION</h4><br>
+                    <h6>To be the platform of choice for taking life’s digital experiences over the top</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="story">
+    <h2>OUR CO-FOUNDERS</h2>
+</div>
+<div>
+<div class="container cofoundercarousel bg-opacity-25 bg-body-secondary pb-3 pt-3 rounded-1">
+    <div class="row">
+        <div class="col-md">
+            <div id="carouselExampleSlidesOnly" class="carousel carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">  
+                  <div class="carousel-item active">
+                    <img src="media/sheila.jpg" class="d-block w-100" alt="minato">
+                    <div class="carousel-caption d-none d-sm-block carcap">
+                        <div class="h4">Marie Cayetano</div>
+                        <div class="h6">A co-founder of Dias Shop, Minato is responsible for building and maintaining relationships with Dias Shop’s clients.</div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/levi.jpg" class="d-block w-100" alt="obito">
+                    <div class="carousel-caption d-none d-sm-block carcap">
+                        <div class="h4">Levi Ann Servillon</div>
+                        <div class="h6">A co-founder of Dias Shop, Obito is responsible for corporate development, strategy, and key account management.</div>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<br>   
+<div class="story">
+<h2>OUR INVESTORS</h2>
+</div>
+<div>
+<div class="container cofoundercarousel bg-white pb-3 pt-3 rounded-1">
+<div class="row">
+    <div class="col-md-4">
+        <div class="card h-100 justify-content-center border-0 cardbg" >
+            <img src="media/com1.png" class="card-img-top" alt="com1">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 justify-content-center border-0 cardbg" >
+            <img src="media/com2.svg" class="card-img-top" alt="com2">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 justify-content-center border-0 cardbg" >
+            <img src="media/com3.png" class="card-img-top" alt="com3">
+        </div>
+    </div>
+</div><br>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card h-100 justify-content-center border-0 cardbg" >
+            <img src="media/com4.png" class="card-img-top" alt="com4">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100 justify-content-center border-0 cardbg" >
+            <img src="media/com5.png" class="card-img-top" alt="com5">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--content-->
+<br>
+<br>
+<!--footer-->
+<div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <p class="copyrights">Logos and photos are copyrighted under Moonton Games, Valve Corporation and RIOT GAMES.<br> Copyright &copy and all rights reserved.</p>
+        </div>
+        <div class="footerBottom">
+            <p>© 2023 Dias Shop Portal; Designed by <span class="designer">Peter C.</span></p>
+        </div>
+    </footer>
+</div>
+<!--footer-->
+<script>
+    (() => {
+    'use strict'
+
+    
+    const forms = document.querySelectorAll('.needs-validation')
+
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="media/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>DIAS SHOP PORTAL</title>
+</head>
+<body>
+<!--navbar-->
+<div>
+<nav class="navbar navbar-expand-lg fixed-top navbarcolor">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4" href="index.html"><img class="logo" src="media/logo.png"></a>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-white border-bottom">
+                <a href="index.html" class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo" src="media/logo.png"></a>
+                <button type="button" class="btn-close btn-close-white shadow-none p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topup.html">Top-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                        <i class='bx bx-log-in' id="loginicon"></i>&nbspLog In/Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+<div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content wrapper" id="body1">
+            <div class="modal-body">
+                <form class="formbg needs-validation" novalidate>
+                    <h1>Log In</h1>
+                    <div class="input-box">
+                        <input type="text email" placeholder="Username/Email Address" required>
+                        <i class='bx bxs-user'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Username or Email Address.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+            
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <p>Forgot password?<a href="#"> Click here!</a></p>
+                    </div>
+            
+                    <button type="submit" class="loginbtn">Log In</button>
+            
+                    <div class="register-link">
+                        <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                        <p>Don't have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup">
+                            Register here!
+                        </button></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="staticBackdrop1Signup" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content wrapper" id="body1">
+            <div class="modal-body">
+                <form class="formbg needs-validation" novalidate>
+                    <h1>Sign Up</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <i class='bx bxs-user'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Full Name.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Address" required>
+                        <i class='bx bx-envelope'></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Email Address.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Confirm Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please confirm your password.
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <i class='bx bx-phone' ></i>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your Phone Number.
+                        </div>
+                    </div>
+            
+                    <button type="submit" class="loginbtn">Signup</button>
+            
+                    <div class="register-link">
+                        <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                        <p>Already have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            Log in here!
+                        </button></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--navbar-->
+<br>
+<br>
+<br>
+<br>
+<!--content-->
+<div class="container h1 pageheader">
+    Dias Shop Portal Privacy Policy
+</div>
+<br>
+<div class="container bg-opacity-25 bg-body-secondary pb-3 pt-3 rounded-1">
+    <div class="privacy"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>1. Introduction</h5>
+                    <p>Dias Shop Portal ("the Portal") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data. By using the Portal, you consent to the practices described in this Privacy Policy.</p>
+                    <h6>2. Information We Collect</h5>
+                    <p>Personal Information: We may collect personal information such as your name, email address, shipping address, and payment information when you register an account, make a purchase, or communicate with us.  Non-Personal Information: We may collect non-personal information, including browsing history, IP address, device information, and cookies. </p>
+                    <h6>3. How We Use Your Information</h6>
+                    <p>To Provide Services: We use your personal information to provide you with services, process orders, and facilitate transactions between buyers and sellers on the Portal. Communication: We may use your contact information to communicate with you about your account, purchases, updates, and promotions. Improve User Experience: We analyze non-personal information to enhance your experience on the Portal, including customizing content and improving our website.</p>
+                    <h6>4. Data Security</h6>
+                    <p>We employ industry-standard security measures to protect your personal information, including encryption, access controls, and regular security audits. However, please be aware that no data transmission over the internet is entirely secure, and we cannot guarantee the security of your information.</p>
+                </div>
+                <div class="col-md-6">
+                    <h6>5. Sharing Your Information</h6>
+                    <p>Sellers: We share your information with sellers to complete your orders and facilitate communication between buyers and sellers. Service Providers: We may share your information with third-party service providers who assist us with payment processing, order fulfillment, and other services.Legal Compliance: We may disclose your information to comply with legal obligations, respond to legal requests, and protect our rights, privacy, safety, or property. </p>
+                    <h6>6. Cookies and Tracking Technologies</h5>
+                    <p>We use cookies and similar tracking technologies to collect non-personal information about your browsing activities. You can manage your cookie preferences through your browser settings.</p>
+                    <h6>7. Third-Party Links</h5>
+                    <p>The Portal may contain links to third-party websites. We are not responsible for their privacy practices, and we recommend reviewing their privacy policies before providing any personal information.</p>
+                    <h6>8. Your Rights</h6>
+                    <p>You have the right to access, correct, or delete your personal information. You can manage your account information and preferences by logging into your account. To exercise these rights, or if you have any privacy concerns or questions, please contact us at <a style="text-decoration: none;" href=mailto:“diasshop@support.com”>diasshop@support.com</a>.</p>
+                    <h6>9. Changes to this Privacy Policy</h6>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please review this Privacy Policy periodically.</p>
+                    <h6>10. Governing Law</h6>
+                    <p>This Privacy Policy is governed by and construed in accordance with the laws of authority.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content-->
+<br>
+<br>
+<!--footer-->
+<div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <p class="copyrights">Logos and photos are copyrighted under Moonton Games, Valve Corporation and RIOT GAMES.<br> Copyright &copy and all rights reserved.</p>
+        </div>
+        <div class="footerBottom">
+            <p>© 2023 Dias Shop Portal; Designed by <span class="designer">Peter C.</span></p>
+        </div>
+    </footer>
+</div>
+<!--footer-->
+<script>
+    (() => {
+    'use strict'
+
+    
+    const forms = document.querySelectorAll('.needs-validation')
+
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
+</script>
+</body>
+</html>
